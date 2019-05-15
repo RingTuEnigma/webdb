@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-amber.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <a class="mdl-layout-title mdl-navigation__link" href="">Home</a>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer" style="border-color: red"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <!--<nav class="mdl-navigation mdl-layout--large-screen-only">
+          <span class="mdl-layout-title">FB</span>
+        </nav>-->
+        <!-- Right aligned menu below button -->
+        <button id="top-right-menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="top-right-menu">
+          <li class="mdl-menu__item"><i class="material-icons">settings</i>Options</li>
+          <li class="mdl-menu__item"><i class="material-icons">input</i>Sign out</li>
+        </ul>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title"><i class="material-icons">today</i>Tasklists</span>
+      <hr>
+      <nav id="navbar" class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">WebDev Project</a>
+        <div id="addTasklist" class="mdl-navigation__link"><i class="material-icons">add</div>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <!-- Your content goes here -->
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
