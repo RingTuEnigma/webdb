@@ -1,8 +1,3 @@
-*{
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
 .rotate:active {
   animation: rotate 500ms;
 }
@@ -16,22 +11,73 @@
   }
 }
 
-.mdl-layout__header-row {
-  display: flex;
-}
 
-li i.material-icons {
+/*li i.material-icons {
   vertical-align: middle;
   position: relative;
   padding-right: 8px;
-}
+}*/
 
-span i.material-icons {
+/*span i.material-icons {
   vertical-align: middle;
   position: relative;
   padding-right: 8px;
-}
+}*/
 
 #addTasklist {
+  cursor: pointer;
+}
+
+/*nav a i.material-icons {
+  vertical-align: middle;
+  position: relative;
+  padding-right: 8px;
+  bottom: 2px;
+}*/
+
+/*nav div i.material-icons {
+  vertical-align: middle;
+  position: relative;
+  padding-right: 8px;
+  bottom: 2px;
+}*/
+hr {
+  border-color: #4CAE50;
+}
+
+.symbol {
+  margin: 0px 8px 0px 0px;
+  position: relative;
+  bottom: 2px;
+}
+.tasklist {
+  margin: 8px;
+  position: relative;
+  top: 6px;
+}
+.controlAddOff {
+  display: none;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.controlAddOn {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.controlIcons {
+  /*border: solid red 1px;*/
+  padding: 0px 8px 0px 8px;
+  opacity: 0.87;
+  cursor: pointer;
+}
+
+.navigationAddOn {
+  cursor: pointer;
+}
+
+#add {
   cursor: pointer;
 }

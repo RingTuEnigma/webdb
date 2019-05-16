@@ -18,7 +18,7 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <a class="mdl-layout-title mdl-navigation__link" href="">Home</a>
+        <span class="mdl-layout-title">Pretty Tasks</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer" style="border-color: red"></div>
         <!-- Navigation. We hide it in small screens. -->
@@ -31,17 +31,19 @@
         </button>
 
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="top-right-menu">
-          <li class="mdl-menu__item"><i class="material-icons">settings</i>Options</li>
-          <li class="mdl-menu__item"><i class="material-icons">input</i>Sign out</li>
+          <li class="mdl-menu__item"><i class="material-icons symbol">settings</i>Account</li>
+          <li class="mdl-menu__item"><i class="material-icons symbol">input</i>Sign out</li>
         </ul>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title"><i class="material-icons">today</i>Tasklists</span>
+      <span class="mdl-layout-title"><i class="material-icons tasklist">today</i>Tasklists</span>
       <hr>
       <nav id="navbar" class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">WebDev Project</a>
-        <div id="addTasklist" class="mdl-navigation__link"><i class="material-icons">add</div>
+        <a class="mdl-navigation__link" href=""><i class="material-icons symbol">dashboard</i>Dashboard</a>
+        <div class="mdl-navigation__link navigationAddOn"><i class="material-icons symbol">view_list</i><text>WebDev Project</text><div class="controlAddOff"><i class="material-icons controlIcons">check</i><i class="material-icons controlIcons">edit</i><i class="material-icons controlIcons">close</i></div></div>
+        <div class="mdl-navigation__link navigationAddOn"><i class="material-icons symbol">view_list</i><text>JavaDev Project</text><div class="controlAddOff"><i class="material-icons controlIcons">check</i><i class="material-icons controlIcons">edit</i><i class="material-icons controlIcons">close</i></div></div>
+        <div id="add" class="mdl-navigation__link navigationAddOn"><i class="material-icons">add</div>
       </nav>
     </div>
     <main class="mdl-layout__content">
