@@ -1,10 +1,10 @@
 var openCreation = 0; //Es soll nur möglich sein, eine Tasklist auf einmal zu erstellen
-var counter = 0; //Dient zur Erstellung der fotlaufenden ID's
+var counter = 0; //Dient zur Erstellung der fotlaufenden ID
 
-$(function () {
-  $("nav").load("navigation.html", function () {
+$(function() {
+  $("nav").load("navigation.html", function() {
     //Erstellt beim Klicken auf das + (Plus) einen Container zum Erstellen einer Liste
-    $("#add").click(function () {
+    $("#add").click(function() {
       if (openCreation == 0) {
         counter = counter + 1;
         //foreignId dient dazu, um die, zu einem Element gehörige Menüleiste gezielt ansprechen zu können
@@ -43,11 +43,11 @@ $(function () {
         newElement.append(menu);
         let check = $("<i></i>").text("check");
         check.addClass("material-icons controlIcons");
-        check.attr("data-foreignId", foreignId)
+        check.attr("data-foreignId", foreignId);
         menu.append(check);
         let edit = $("<i></i>").text("edit");
         edit.addClass("material-icons controlIcons");
-        edit.attr("data-foreignId", foreignId)
+        edit.attr("data-foreignId", foreignId);
         menu.append(edit);
         let close = $("<i></i>").text("close");
         close.addClass("material-icons controlIcons");
@@ -61,20 +61,20 @@ $(function () {
 
         //Anbinden der EventListener an die verschiedenen Menüwerkzeuge
         //Close bricht die Erstellung ab
-        close.click(function () {
+        close.click(function() {
           newElement.remove();
           openCreation = openCreation - 1;
         });
         //Edit hat während der Erstellung keine Funktion
-        edit.click(function () {
+        edit.click(function() {
           //NOUSE
         });
 
         //Abschließen der Bearbeitung und Erstellen der Tasklist durch Klick auf Enter oder Haken {
-        check.click(function () {
+        check.click(function() {
           console.log("Send to php");
         });
-        input.keydown(function (ev) {
+        input.keydown(function(ev) {
           if (ev.keyCode == 13) {
             console.log("Send to php");
           }
@@ -82,13 +82,11 @@ $(function () {
         //}
       }
     });
-    $("#navbar").click(function () {
+    $("#navbar").click(function() {
       componentHandler.upgradeDom();
-    })
-
+    });
 
     $(".navigationAddOn").click(menuFocus);
-
 
     //Funktionen um Menü Ein-/Auszublenden {
     //Schließt alle offenen Menüs
@@ -102,7 +100,7 @@ $(function () {
     function menuFocus() {
       closeAllMenus();
       $("#" + $(this).attr("data-foreignId")).addClass("controlbarOn");
-    };
+    }
 
     //Kann an einen eventListener eines Elements mit dem Attribute data-foreignId gebunden werden
     function closeThisMenu() {
@@ -112,18 +110,12 @@ $(function () {
     //}
 
     $.post(
-      'navigation.php',
+      "navigation.php",
       {},
-      function (data) {
-        $('#add').before(jQuery.templates("#userTemplate").render(data));
+      function(data) {
+        $("#add").before(jQuery.templates("#userTemplate").render(data));
       },
       "json"
     );
-
-
   });
 });
-
-
-
-
