@@ -55,13 +55,13 @@ hr {
   position: relative;
   top: 6px;
 }
-.controlAddOff {
+.controlbarOff {
   display: none;
   justify-content: flex-start;
   padding-top: 8px;
 }
 
-.controlAddOn {
+.controlbarOn {
   display: flex;
   justify-content: flex-start;
   padding-top: 8px;
