@@ -1,11 +1,11 @@
 <script id="userTemplate" type="text/x-jquery-tmpl">
-  <div class="mdl-navigation__link navigationAddOn" data-foreignId="{{:foreignId}}">
+  <div class="mdl-navigation__link navigationAddOn" data-foreignId="{{:foreignId}}" data-listName="{{:listName}}">
       <i class="material-icons symbol">view_list</i>
-      <text>{{:listName}}</text>
+      {{:listName}}
       <div id="{{:foreignId}}" class="controlbarOff">
-          <i class="material-icons controlIcons">check</i>
-          <i class="material-icons controlIcons">edit</i>
-          <i class="material-icons controlIcons">close</i>
+          <i class="material-icons controlIcons" data-foreignId="{{:foreignId}}" data-type="check">check</i>
+          <i class="material-icons controlIcons" data-foreignId="{{:foreignId}}" data-type="edit">edit</i>
+          <i class="material-icons controlIcons" data-foreignId="{{:foreignId}}" data-type="close">close</i>
       </div>
    </div>
 </script>
@@ -14,7 +14,7 @@
 
 <div class="mdl-navigation__link navigationAddOn" data-foreignId="Tasklist6">
   <i class="material-icons symbol">view_list</i>
-  <text>WebDev Project</text>
+  <span>WebDev Project</span>
   <div id="Tasklist6" class="controlbarOff">
     <i class="material-icons controlIcons">check</i>
     <i class="material-icons controlIcons">edit</i>
